@@ -1,0 +1,21 @@
+.loadingWrap{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  &::before{
+    content: " ";
+    display: block;
+    background: rgba(39, 36, 36, 0.145);
+    height: 40px;
+    width: 40px;
+  }
+  &::after{
+    content: " ";
+    display: block;
+  }
+}
+
