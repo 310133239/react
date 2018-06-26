@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dva Demo</title>
   <link rel="stylesheet" href="index.css" />
+  <script type="text/javascript">!function(e){function t(a){if(i[a])return i[a].exports;var r=i[a]={exports:{},id:a,loaded:!1};return e[a].call(r.exports,r,r.exports,t),r.loaded=!0,r.exports}var i={};return t.m=e,t.c=i,t.p="",t(0)}([function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var i=window;t.default=i.flex=function(e,t){var a=e||100,r=t||1,n=i.document,o=navigator.userAgent,d=o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),l=o.match(/U3\/((\d+|\.){5,})/i),p=l&&parseInt(l[1].split(".").join(""),10)>=80,s=navigator.appVersion.match(/(iphone|ipad|ipod)/gi),c=i.devicePixelRatio||1;s||d&&d[1]>534||p||(c=1);var u=1/c,m=n.querySelector('meta[name="viewport"]');m||(m=n.createElement("meta"),m.setAttribute("name","viewport"),n.head.appendChild(m)),m.setAttribute("content","width=device-width,user-scalable=yes,initial-scale="+u+",maximum-scale="+u+",minimum-scale="+u),n.documentElement.style.fontSize=a/2*c*r+"px"},e.exports=t.default}]),flex(100,2)</script>
 </head>
 <body>
 

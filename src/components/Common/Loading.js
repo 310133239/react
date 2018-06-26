@@ -13,17 +13,18 @@ export default class Loading extends PureComponent {
   }
 
   render() {
-    const { title = '加载中' } = this.props;
+    const { title = '加载中', loading, children } = this.props;
     return (
       <div>
         {
-          true ? (
+          loading ? (
             <div className={style.loadingWrap}>
-              <div className={style.loadingText}>
+              <div className={style.title}>
                 {title}
               </div>
             </div>) : null
         }
+        {children}
       </div>
     );
   }

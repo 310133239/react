@@ -1,12 +1,10 @@
-import React from 'react';
-import { connect } from 'dva';
-import style from './Index.less';
+import Index from '../components/Index/Index';
+import getRoute from '../utils/routeutil';
 
-function IndexPage() {
-  return (<div className={style.name} />);
+export default function ContractRouter({ location: { pathname } }) {
+  const ROUTES = [
+    { path: '/', title: '主页面', component: Index },
+  ];
+
+  return getRoute(ROUTES, pathname);
 }
-
-IndexPage.propTypes = {
-};
-
-export default connect()(IndexPage);
