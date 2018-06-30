@@ -22,7 +22,6 @@ export default {
     })
   ],
   extraBabelPlugins: [
-    "transform-decorators-legacy",
     "transform-class-properties",
     "array-includes",
     ["import", {

@@ -4,7 +4,7 @@ export default class Loading extends PureComponent {
   render() {
     return (
       <div>
-        {123}
+        {404}
       </div>);
   }
 }

@@ -6,6 +6,7 @@ import PageNotFoundPage from '../components/Common/PageNotFound';
 const REG = /([^?]*)/;
 // 添加路由的前缀处理
 export default function getRoute(routes, pathname) {
+  debugger; // eslint-disable-line
   const path = REG.exec(pathname)[0];
   const route = routes.find((item) => {
     return matchURL(getPattern(item.path), path);
