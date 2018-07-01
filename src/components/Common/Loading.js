@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import style from './Loading.less';
+import Empty from './EmptyPage';
 
 export default class Loading extends PureComponent {
   state = {};
@@ -13,18 +14,24 @@ export default class Loading extends PureComponent {
   }
 
   render() {
-    const { title = '加载中', loading, children } = this.props;
+    const {
+      title = '加载中',
+      loading,
+      children,
+      mask,
+    } = this.props;
     return (
       <div>
-        {
-          loading ? (
+        { loading ? (mask === true
+          ? (
             <div className={style.loadingWrap}>
               <div className={style.title}>
                 {title}
               </div>
-            </div>) : null
-        }
-        {children}
+            </div>
+          ) : null)
+          : null }
+        {children || <Empty />}
       </div>
     );
   }
